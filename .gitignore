@@ -2,3 +2,4 @@ KakaoTalk_*.png
 *.pdf
 .DS_Store
 assets/profile.png
+.claude/

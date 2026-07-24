@@ -185,9 +185,9 @@ function initScrollAnimations() {
       y: 26, opacity: 0, duration: 0.7, ease: "power3.out",
       scrollTrigger: { trigger: ".skills", start: "top 82%" },
     });
-    gsap.from(".skills .skill", {
+    gsap.from(".skills .exp", {
       y: 30, opacity: 0, duration: 0.6, stagger: 0.12, ease: "power3.out",
-      scrollTrigger: { trigger: ".skills__list", start: "top 88%" },
+      scrollTrigger: { trigger: ".expertise", start: "top 88%" },
     });
   }
 

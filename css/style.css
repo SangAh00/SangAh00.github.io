@@ -5,7 +5,7 @@
   --muted: #6b6862;
   --line: rgba(20, 17, 15, 0.14);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
-  --accent: #d24d2b;    /* subtle warm accent */
+  --accent: #2f5fd7;    /* deep professional blue */
   --display: "Anton", "Pretendard", sans-serif;
 }
 
@@ -418,6 +418,9 @@ a { color: inherit; text-decoration: none; }
 .edu__curri { max-width: 1100px; margin: clamp(2.4rem, 5vw, 3.5rem) auto 0; }
 .edu__tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
 .edu__tags span {
+  flex: 1 1 auto;          /* 각 행을 꽉 채워 빈칸이 생기지 않게 */
+  text-align: center;
+  white-space: nowrap;
   font-size: 0.88rem;
   font-weight: 500;
   padding: 0.5em 1.05em;
@@ -1047,7 +1050,7 @@ a { color: inherit; text-decoration: none; }
 .job:last-child { border-bottom: 1px solid var(--line); }
 .job__when { font-weight: 700; letter-spacing: 0.02em; }
 .job__when small { display: block; color: var(--muted); font-weight: 600; margin-top: 0.35rem; font-size: 0.85rem; letter-spacing: 0.04em; }
-.job__co { font-family: var(--display); font-size: clamp(1.7rem, 3.4vw, 2.6rem); letter-spacing: 0.01em; line-height: 1; }
+.job__co { font-size: clamp(1.5rem, 3vw, 2.15rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; }
 .job__role { color: var(--muted); font-weight: 600; margin: 0.5rem 0 1.1rem; }
 .job__desc { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; max-width: 62ch; line-height: 1.7; color: #38332f; }
 .job__desc li { position: relative; padding-left: 1.1rem; font-size: clamp(0.98rem, 1.2vw, 1.1rem); }
@@ -1120,6 +1123,10 @@ a { color: inherit; text-decoration: none; }
 /* ===== About lead — masked lines ===== */
 .intro__lead .line { padding-bottom: 0.1em; }
 .intro__lead { max-width: none; line-height: 1.24; }
+/* 좌측 리드 문구가 우측 내용과 나란히 머물도록 (아래 여백 제거) */
+@media (min-width: 861px) {
+  .intro__left { position: sticky; top: 96px; }
+}
 
 /* ===== 경력기술서 (Experience) — editorial, no boxes ===== */
 .jd { padding: clamp(5rem, 10vh, 9rem) clamp(20px, 4vw, 56px); }
@@ -1195,7 +1202,7 @@ a { color: inherit; text-decoration: none; }
 .jd__item.is-open .jd__panel { grid-template-rows: 1fr; }
 .jd__panel > div { overflow: hidden; }
 .jd__panel .jd__groups { padding-top: clamp(1.5rem, 3vw, 2.4rem); }
-.jd__co { font-family: var(--display); font-size: clamp(1.7rem, 4vw, 2.7rem); letter-spacing: 0.01em; line-height: 1; }
+.jd__co { font-size: clamp(1.5rem, 3vw, 2.15rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; }
 .jd__meta { font-size: 0.88rem; font-weight: 700; color: var(--muted); letter-spacing: 0.02em; }
 .jd__groups {
   display: grid;

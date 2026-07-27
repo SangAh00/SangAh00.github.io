@@ -23,7 +23,7 @@
   <link rel="stylesheet" as="style" crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=20260727" />
 </head>
 <body>
   <!-- ===== Loader ===== -->
@@ -96,7 +96,7 @@
         </div>
         <div class="intro__point">
           <h4><i>02</i> 검증된 협업 능력과 유연한 소통</h4>
-          <p>매년 전 직원 대상 협업 및 승진 평가에서 최상위권을 유지했습니다. 회계팀 내부는 물론 사내 IT·개발팀 등 타 부서와 소통하며 현장의 니즈를 파악하고 회계 지식을 접목해 전표 자동화 및 ERP 개편 프로젝트를 성공적으로 완수했습니다.</p>
+          <p>매년 전 직원 대상 협업 및 승진 평가에서 상위 5%내 유지했습니다. 회계팀 내부는 물론 사내 IT·개발팀 등 타 부서와 소통하며 현장의 니즈를 파악하고 회계 지식을 접목해 전표 자동화 및 ERP 개편 프로젝트를 성공적으로 완수했습니다.</p>
         </div>
         <div class="intro__point">
           <h4><i>03</i> 연결회계 및 상장(IPO) 지정감사 완수</h4>
@@ -104,7 +104,7 @@
         </div>
         <div class="intro__point">
           <h4><i>04</i> 데이터 기반의 업무 프로세스 자동화 및 개선</h4>
-          <p>전표 자동화 및 사내 ERP 매출·비용 관리 메뉴를 직접 기획·구현하여 수기 작업의 비효율을 개선했습니다. 더 나아가 재무빅데이터분석사 자격 취득과 Python, SQL 학습을 병행하며 데이터 기반의 프로세스를 고도화하는 실무 전문가로 계속해서 발전해 나가고 있습니다.</p>
+          <p>전표 자동화 및 사내 ERP 매출·비용 관리 메뉴를 주도적으로 기획·구현하여 수기 작업의 비효율을 개선했습니다. 더 나아가 재무빅데이터분석사 자격 취득과 Python, SQL 학습을 병행하며 데이터 기반의 프로세스를 고도화하는 실무 전문가로 계속해서 발전해 나가고 있습니다.</p>
         </div>
       </div>
     </div>
@@ -128,6 +128,14 @@
           <li><span>수원여자대학 (2·3년제) · 세무회계정보과</span><em>2012.02 졸업</em></li>
           <li><span>성남여자고등학교 · 이과계열</span><em>2010.02 졸업</em></li>
         </ul>
+        <h3 class="edu__h">Tools &amp; Skills</h3>
+        <div class="edu__tags">
+          <span>K-IFRS</span><span>K-GAAP</span><span>연결회계</span><span>내부거래</span>
+          <span>외부감사</span><span>세무신고</span><span>자금 및 외환관리</span>
+          <span>내부회계관리제도</span><span>ERP 회계 프로세스 구축</span><span>상호협업</span>
+          <span>더존 I-U</span><span>더존 I-Cube</span><span>위하고</span><span>스마트A</span><span>이카운트</span>
+          <span>Python</span><span>SQL</span><span>Slack</span><span>Notion</span>
+        </div>
       </div>
       <div class="edu__col">
         <h3 class="edu__h">자격증</h3>
@@ -141,21 +149,12 @@
         </ul>
       </div>
     </div>
-    <div class="edu__curri">
-      <h3 class="edu__h">Tools &amp; Skills</h3>
-      <div class="edu__tags">
-        <span>K-IFRS</span><span>K-GAAP</span><span>연결회계</span><span>내부거래</span>
-        <span>외부감사</span><span>세무신고</span><span>자금 및 외환관리</span>
-        <span>내부회계관리제도</span><span>ERP 회계 프로세스 구축</span><span>상호협업</span>
-        <span>더존 I-U</span><span>더존 I-Cube</span><span>위하고</span><span>스마트A</span><span>이카운트</span>
-        <span>Python</span><span>SQL</span><span>Slack</span><span>Notion</span>
-      </div>
-    </div>
   </section>
 
   <!-- ===== Career ===== -->
   <section class="career" id="career">
     <h2 class="section-title"><i class="star">✦</i> Career <i class="star">✦</i></h2>
+    <p class="career__sub">총 경력 <b>10년 6개월</b> · 3개사 — 스타트업 · 코스닥 상장사 · 중소기업</p>
     <div class="career__list">
 
       <article class="job">
@@ -241,10 +240,12 @@
     <div class="jd__list">
 
       <article class="jd__item">
-        <div class="jd__head">
-          <h3 class="jd__co">㈜팀프레시</h3>
+        <button class="jd__head" type="button" aria-expanded="false">
+          <span class="jd__co">㈜팀프레시</span>
           <span class="jd__meta">2024.03 — 2025.04 · 회계관리팀 · 연결회계</span>
-        </div>
+          <span class="jd__toggle" aria-hidden="true"></span>
+        </button>
+        <div class="jd__panel"><div>
         <div class="jd__groups">
           <div class="jd__group">
             <h4><i>01</i> 회계 결산 및 보고</h4>
@@ -278,13 +279,16 @@
             </ul>
           </div>
         </div>
+        </div></div>
       </article>
 
       <article class="jd__item">
-        <div class="jd__head">
-          <h3 class="jd__co">㈜마크로밀엠브레인</h3>
+        <button class="jd__head" type="button" aria-expanded="false">
+          <span class="jd__co">㈜마크로밀엠브레인</span>
           <span class="jd__meta">2017.02 — 2022.08 · 재무회계부 · 과장</span>
-        </div>
+          <span class="jd__toggle" aria-hidden="true"></span>
+        </button>
+        <div class="jd__panel"><div>
         <div class="jd__groups">
           <div class="jd__group">
             <h4><i>01</i> 회계 · 결산</h4>
@@ -330,13 +334,16 @@
             </ul>
           </div>
         </div>
+        </div></div>
       </article>
 
       <article class="jd__item">
-        <div class="jd__head">
-          <h3 class="jd__co">보람상조그룹</h3>
+        <button class="jd__head" type="button" aria-expanded="false">
+          <span class="jd__co">보람상조그룹</span>
           <span class="jd__meta">2011.12 — 2015.10 · 재무팀 · 사원</span>
-        </div>
+          <span class="jd__toggle" aria-hidden="true"></span>
+        </button>
+        <div class="jd__panel"><div>
         <div class="jd__groups">
           <div class="jd__group">
             <h4><i>01</i> 회계 · 결산</h4>
@@ -368,6 +375,7 @@
             </ul>
           </div>
         </div>
+        </div></div>
       </article>
 
     </div>
@@ -395,6 +403,7 @@
         <div>
           <span class="pj__no">01</span>
           <span class="pj__when">2024.10<br />1개월</span>
+          <span class="pj__co">㈜팀프레시</span>
         </div>
         <div>
           <h3 class="pj__title">내부거래 집계 프로세스 개선 및 제작</h3>
@@ -422,6 +431,7 @@
         <div>
           <span class="pj__no">02</span>
           <span class="pj__when">2018.07 — 2020.07<br />2년</span>
+          <span class="pj__co">㈜마크로밀엠브레인</span>
         </div>
         <div>
           <h3 class="pj__title">코스닥 상장(IPO)을 위한 지정감사</h3>
@@ -449,6 +459,7 @@
         <div>
           <span class="pj__no">03</span>
           <span class="pj__when">2020.05 — 2020.08<br />3개월</span>
+          <span class="pj__co">㈜마크로밀엠브레인</span>
         </div>
         <div>
           <h3 class="pj__title">전표 자동화 및 결재 프로세스 개선</h3>
@@ -476,6 +487,7 @@
         <div>
           <span class="pj__no">04</span>
           <span class="pj__when">2020.05 — 2020.08<br />3개월</span>
+          <span class="pj__co">㈜마크로밀엠브레인</span>
         </div>
         <div>
           <h3 class="pj__title">사내 ERP 매출 · 프로젝트 비용 관리 메뉴 구축</h3>
@@ -503,6 +515,7 @@
         <div>
           <span class="pj__no">05</span>
           <span class="pj__when">2021.05 — 2021.12<br />8개월</span>
+          <span class="pj__co">㈜마크로밀엠브레인</span>
         </div>
         <div>
           <h3 class="pj__title">자금 집행(사례비) 프로세스 디지털화</h3>
@@ -557,6 +570,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20260727"></script>
 </body>
 </html>

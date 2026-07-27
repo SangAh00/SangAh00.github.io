@@ -268,6 +268,32 @@ if (lenis) lenis.on("scroll", ({ scroll }) => navOnScroll(scroll));
 else window.addEventListener("scroll", () => navOnScroll(window.scrollY));
 
 /* -----------------------------------------------------------
+   4-1) 경력기술서 accordion (회사별 접기/펼치기)
+----------------------------------------------------------- */
+(function setupAccordion() {
+  const items = document.querySelectorAll(".jd__item");
+  if (!items.length) return;
+
+  items.forEach((item, i) => {
+    const head = item.querySelector(".jd__head");
+    if (!head) return;
+    // 최근 경력 1건은 기본으로 펼쳐둔다
+    if (i === 0) {
+      item.classList.add("is-open");
+      head.setAttribute("aria-expanded", "true");
+    }
+    head.addEventListener("click", () => {
+      const open = item.classList.toggle("is-open");
+      head.setAttribute("aria-expanded", open ? "true" : "false");
+      // 높이가 바뀌므로 스크롤 트리거 위치를 다시 계산
+      if (window.ScrollTrigger) {
+        setTimeout(() => ScrollTrigger.refresh(), 520);
+      }
+    });
+  });
+})();
+
+/* -----------------------------------------------------------
    5) Slide-out menu (hamburger → sweeps in from the left)
 ----------------------------------------------------------- */
 (function setupMenu() {

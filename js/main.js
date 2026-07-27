@@ -151,6 +151,18 @@ function initScrollAnimations() {
     });
   }
 
+  /* 3a-0. About lead — masked lines rise (same language as hero/CTA) */
+  if (document.querySelector(".intro__lead .line__inner")) {
+    if (reduceMotion) {
+      gsap.set(".intro__lead .line__inner", { yPercent: 0 });
+    } else {
+      gsap.from(".intro__lead .line__inner", {
+        yPercent: 110, duration: 1, ease: "power4.out", stagger: 0.11,
+        scrollTrigger: { trigger: ".intro__lead", start: "top 82%" },
+      });
+    }
+  }
+
   /* 3a-1. About label reveal */
   if (document.querySelector(".intro__label")) {
     gsap.to(".intro__label", {
@@ -185,7 +197,7 @@ function initScrollAnimations() {
       y: 26, opacity: 0, duration: 0.7, stagger: 0.1, ease: "power3.out",
       scrollTrigger: { trigger: ".jd", start: "top 82%" },
     });
-    gsap.utils.toArray(".jd__card").forEach((card) => {
+    gsap.utils.toArray(".jd__item").forEach((card) => {
       gsap.from(card, {
         y: 44, opacity: 0, duration: 0.9, ease: "power3.out",
         scrollTrigger: { trigger: card, start: "top 88%" },

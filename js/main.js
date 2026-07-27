@@ -159,11 +159,11 @@ function initScrollAnimations() {
     });
   }
 
-  /* 3a-2. About body paragraphs fade up (stagger) */
-  if (document.querySelector(".intro__body")) {
-    gsap.from(".intro__body p", {
-      opacity: 0, y: 24, duration: 0.9, ease: "power3.out", stagger: 0.15,
-      scrollTrigger: { trigger: ".intro__body", start: "top 82%" },
+  /* 3a-2. About key points fade up (stagger) */
+  if (document.querySelector(".intro__points")) {
+    gsap.from(".intro__point", {
+      opacity: 0, y: 26, duration: 0.9, ease: "power3.out", stagger: 0.14,
+      scrollTrigger: { trigger: ".intro__points", start: "top 82%" },
     });
   }
 
@@ -179,33 +179,35 @@ function initScrollAnimations() {
     });
   }
 
-  /* 3b-1. Skills section reveal — title + rows rise & fade in */
-  if (document.querySelector(".skills")) {
-    gsap.from(".skills .section-title", {
-      y: 26, opacity: 0, duration: 0.7, ease: "power3.out",
-      scrollTrigger: { trigger: ".skills", start: "top 82%" },
+  /* 3b-1. 경력기술서 cards reveal */
+  if (document.querySelector(".jd")) {
+    gsap.from(".jd .section-title, .jd__sub", {
+      y: 26, opacity: 0, duration: 0.7, stagger: 0.1, ease: "power3.out",
+      scrollTrigger: { trigger: ".jd", start: "top 82%" },
     });
-    gsap.from(".skills .skill", {
-      y: 30, opacity: 0, duration: 0.6, stagger: 0.12, ease: "power3.out",
-      scrollTrigger: { trigger: ".skills__list", start: "top 88%" },
+    gsap.utils.toArray(".jd__card").forEach((card) => {
+      gsap.from(card, {
+        y: 44, opacity: 0, duration: 0.9, ease: "power3.out",
+        scrollTrigger: { trigger: card, start: "top 88%" },
+      });
     });
   }
 
-  /* 3b-2. Skill bars fill on scroll */
-  gsap.utils.toArray("[data-skill]").forEach((skill) => {
-    const bar = skill.querySelector(".skill__bar i");
-    const level = skill.dataset.level || 100;
-    if (reduceMotion) {
-      gsap.set(bar, { width: level + "%" });
-      return;
-    }
-    gsap.to(bar, {
-      width: level + "%",
-      duration: 1.2,
-      ease: "power3.out",
-      scrollTrigger: { trigger: skill, start: "top 88%" },
+  /* 3b-2. Project cards reveal (batched stagger) */
+  if (document.querySelector(".projects")) {
+    gsap.from(".projects .section-title, .projects__sub", {
+      y: 26, opacity: 0, duration: 0.7, stagger: 0.1, ease: "power3.out",
+      scrollTrigger: { trigger: ".projects", start: "top 82%" },
     });
-  });
+    if (!reduceMotion) {
+      gsap.set(".pj", { opacity: 0, y: 44 });
+      ScrollTrigger.batch(".pj", {
+        start: "top 90%",
+        onEnter: (els) =>
+          gsap.to(els, { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power3.out", overwrite: true }),
+      });
+    }
+  }
 
   /* 3b-3. Education reveal */
   if (document.querySelector(".edu")) {

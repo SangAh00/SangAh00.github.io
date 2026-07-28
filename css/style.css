@@ -1438,14 +1438,18 @@ a { color: inherit; text-decoration: none; }
 
 /* ===== 모바일 정리 ===== */
 @media (max-width: 680px) {
-  /* 경력: 회사명·담당업무가 먼저 보이고, 기간·회사정보가 뒤따르도록 */
-  .job { grid-template-columns: 1fr; gap: 1.1rem; }
-  .job__when { order: 2; }
-  .job > div:last-child { order: 1; }
-  .job__when .job__facts { border-top: none; padding-top: 0.9rem; }
-
-  /* 회사 정보: 라벨 폭 고정으로 값이 가지런히 정렬 */
-  .job__facts li b { flex: 0 0 3.1em; }
+  /* 경력: 웹 버전과 동일한 2단 구성을 모바일 폭에 맞춰 축소 */
+  .job { grid-template-columns: 104px 1fr; gap: 0.9rem; }
+  .job__when { font-size: 0.7rem; line-height: 1.45; white-space: nowrap; }
+  .job__when small { display: block; margin-top: 0.15rem; font-size: 0.95em; }
+  .job__when small::before { content: none; }
+  .job__facts { margin-top: 0.9rem; padding-top: 0.8rem; font-size: 0.72rem; gap: 0.5rem; }
+  .job__facts li { flex-direction: column; gap: 0.1rem; }
+  .job__facts li b { flex: none; }
+  .job__co { font-size: 1.35rem; }
+  .job__role { font-size: 0.82rem; margin: 0.4rem 0 0.9rem; }
+  .job__desc li { font-size: 0.88rem; padding-left: 0.95rem; }
+  .job__tags span { font-size: 0.72rem; padding: 0.35em 0.75em; }
 
   /* 경력기술서 헤더: 회사명과 기간을 세로로 */
   .jd__head { gap: 0.3rem 0.8rem; padding-right: 44px; position: relative; }

@@ -1474,9 +1474,20 @@ a { color: inherit; text-decoration: none; }
   .pj__meta { margin-top: 0; }
   .pj__metrics { grid-template-columns: repeat(auto-fit, minmax(46%, 1fr)); }
 
-  /* 학력·자격증 항목이 좁은 화면에서 겹치지 않도록 */
-  .edu__list li, .edu__awards li { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
-  .edu__list li em { font-size: 0.82rem; }
+  /* 학력·자격증: 날짜를 항목 위에 배치 */
+  .edu__list li, .edu__awards li {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 0.28rem;
+    padding: 0.85rem 0;
+  }
+  .edu__list li em {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--accent);
+  }
+  .edu__list li span { font-size: 0.94rem; line-height: 1.5; }
 
   /* 섹션 타이틀 여백 축소 */
   .career__sub, .jd__sub, .projects__sub { margin-bottom: 2.2rem; }

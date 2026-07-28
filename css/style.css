@@ -1331,9 +1331,10 @@ a { color: inherit; text-decoration: none; }
   background-clip: text;
   color: transparent;
 }
+.pj__metric { text-align: center; }
 .pj__metric span {
   display: block;
-  margin-top: 0.42rem;
+  margin: 0.42rem auto 0;
   font-size: 0.78rem;
   color: var(--muted);
   line-height: 1.45;

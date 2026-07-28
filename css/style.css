@@ -1449,6 +1449,11 @@ a { color: inherit; text-decoration: none; }
   .job__co { font-size: 1.35rem; }
   .job__role { font-size: 0.82rem; margin: 0.4rem 0 0.9rem; }
   .job__desc li { font-size: 0.88rem; padding-left: 0.95rem; }
+  /* 태그는 좌측 컬럼까지 끌어와 전체 폭으로 나열 */
+  .job__tags {
+    margin-left: calc(-104px - 0.9rem);
+    margin-top: 1.2rem;
+  }
   .job__tags span { font-size: 0.72rem; padding: 0.35em 0.75em; }
 
   /* 경력기술서 헤더: 회사명과 기간을 세로로 */

@@ -1479,7 +1479,7 @@ a { color: inherit; text-decoration: none; }
     grid-auto-columns: 1fr;
     gap: 0.7rem;
   }
-  .pj__metric b { font-size: 1.12rem; letter-spacing: -0.03em; }
+  .pj__metric b { font-size: 1.32rem; letter-spacing: -0.04em; }
   .pj__metric span {
     font-size: 0.7rem;
     line-height: 1.4;

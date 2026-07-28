@@ -1374,8 +1374,9 @@ a { color: inherit; text-decoration: none; }
   .pj__no { display: inline-block; }
 }
 
-/* 6th menu item delay */
+/* 6·7번째 메뉴 지연 */
 .menu.is-open .menu__nav a:nth-child(6) { transition-delay: 0.56s; }
+.menu.is-open .menu__nav a:nth-child(7) { transition-delay: 0.62s; }
 
 /* ===== Gradient accents (그라데이션 포인트 + 입체감) ===== */
 .jd__group h4 i,

@@ -1477,12 +1477,29 @@ a { color: inherit; text-decoration: none; }
     margin-left: calc(-90px - 0.75rem);
     margin-top: 1.2rem;
   }
+  /* 모바일에서는 알약 박스를 없애고 키워드 나열로 표시
+     — 박스가 없으니 폭이 들쭉날쭉하거나 빈 공간이 생기지 않음 */
+  .job__tags {
+    display: block;
+    font-size: 0.78rem;
+    line-height: 1.75;
+    color: var(--muted);
+  }
   .job__tags span {
-    flex: 1 1 auto;        /* 각 줄을 꽉 채워 오른쪽 빈 공간 제거 */
-    text-align: center;
+    display: inline;
+    background: none;
+    color: var(--fg);
+    border-radius: 0;
+    padding: 0;
+    font-weight: 700;
+    letter-spacing: -0.01em;
     white-space: nowrap;
-    font-size: 0.72rem;
-    padding: 0.35em 0.75em;
+  }
+  .job__tags span + span::before {
+    content: " · ";
+    color: var(--muted);
+    font-weight: 500;
+    white-space: normal;
   }
 
   /* 경력기술서 헤더: 회사명과 기간을 세로로 */

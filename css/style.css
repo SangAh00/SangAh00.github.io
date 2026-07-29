@@ -1523,3 +1523,10 @@ a { color: inherit; text-decoration: none; }
   /* 섹션 타이틀 여백 축소 */
   .career__sub, .jd__sub, .projects__sub { margin-bottom: 2.2rem; }
 }
+
+/* ===== 마지막 줄에 단어 하나만 떨어지는 현상 방지 ===== */
+p, li, .pj__sum, .job__role, .jd__meta {
+  text-wrap: pretty;
+}
+/* 줄바꿈으로 분리되면 어색한 구절 묶기 */
+.nb { white-space: nowrap; }

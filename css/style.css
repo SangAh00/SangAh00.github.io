@@ -1544,3 +1544,5 @@ p, li, .pj__sum, .job__role, .jd__meta {
 @media (min-width: 1180px) {
   .job__desc li.oneline { white-space: nowrap; }
 }
+/* 괄호 안 나열은 통째로 다음 줄로 — 괄호 중간에서 끊기지 않게 */
+.paren { white-space: nowrap; }

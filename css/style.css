@@ -1464,7 +1464,13 @@ a { color: inherit; text-decoration: none; }
   /* 긴 값은 좁은 컬럼에서 넘치지 않도록 줄바꿈 허용 (숫자 값은 짧아 그대로 유지됨) */
   .job__facts li > span > i { white-space: normal; }
   .job__co { font-size: 1.42rem; }
-  .job__role { font-size: 0.85rem; margin: 0.4rem 0 0.9rem; text-wrap: balance; }
+  /* 화면 폭에 맞춰 축소해 한 줄로 유지 (아주 좁으면 자연 줄바꿈) */
+  .job__role {
+    font-size: clamp(0.68rem, 3.15vw, 0.82rem);
+    margin: 0.4rem 0 0.9rem;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
   .job__desc li { font-size: 0.95rem; padding-left: 0.95rem; line-height: 1.62; }
   /* 태그는 좌측 컬럼까지 끌어와 전체 폭으로 나열 */
   .job__tags {

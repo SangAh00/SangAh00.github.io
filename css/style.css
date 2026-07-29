@@ -1530,3 +1530,7 @@ p, li, .pj__sum, .job__role, .jd__meta {
 }
 /* 줄바꿈으로 분리되면 어색한 구절 묶기 */
 .nb { white-space: nowrap; }
+/* 지정한 항목은 폭이 충분할 때 한 줄로 유지 (좁으면 잘림 방지를 위해 자동 줄바꿈) */
+@media (min-width: 1180px) {
+  .job__desc li.oneline { white-space: nowrap; }
+}

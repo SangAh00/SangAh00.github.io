@@ -1544,6 +1544,10 @@ p, li, .pj__sum, .job__role, .jd__meta {
 @media (max-width: 680px) {
   br.br-desktop { display: none; }
 }
+/* 모바일에서만 적용되는 줄바꿈 — 데스크톱에서는 문장이 이어짐 */
+@media (min-width: 681px) {
+  br.br-mobile { display: none; }
+}
 /* 지정한 항목은 폭이 충분할 때 한 줄로 유지 (좁으면 잘림 방지를 위해 자동 줄바꿈) */
 @media (min-width: 1180px) {
   .job__desc li.oneline { white-space: nowrap; }

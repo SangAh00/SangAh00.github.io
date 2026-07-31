@@ -5,9 +5,9 @@
   --muted: #6b6862;
   --line: rgba(20, 17, 15, 0.14);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
-  --accent: #4338ca;    /* deep indigo */
-  --accent-2: #6d28d9;  /* deep violet */
-  --grad: linear-gradient(135deg, #3f37b8 0%, #4d3bb2 100%);
+  --accent: #3d2ad6;    /* vivid indigo */
+  --accent-2: #7a1ceb;  /* vivid violet */
+  --grad: linear-gradient(135deg, #3a2ac6 0%, #4a2ec4 100%);
   --display: "Anton", "Pretendard", sans-serif;
 }
 
@@ -1325,13 +1325,13 @@ a { color: inherit; text-decoration: none; }
   font-size: clamp(1.25rem, 2.1vw, 1.6rem);
   line-height: 1.2;
   letter-spacing: -0.02em;
-  /* 같은 보라 계열 3단 그라데이션 + 아주 느린 광택 흐름 (톤 다운 2차) */
+  /* 같은 보라 계열 3단 그라데이션 + 아주 느린 광택 흐름 (폭은 좁게, 채도는 높게) */
   background: linear-gradient(110deg,
-    #3f37b8 0%,
-    #443ab6 35%,
-    #4a3bb4 50%,
-    #443ab6 65%,
-    #3f37b8 100%);
+    #3a2ac6 0%,
+    #402dc4 35%,
+    #452ec2 50%,
+    #402dc4 65%,
+    #3a2ac6 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1425,11 +1425,11 @@ a { color: inherit; text-decoration: none; }
 .jd__group li { font-size: 0.94rem; line-height: 1.7; }
 .jd__group h4 small { font-weight: 600; color: var(--muted); font-size: 0.76rem; letter-spacing: 0.03em; margin-left: auto; }
 
-/* ===== 은은한 글로우 (아주 약하게) ===== */
-.pj__metric b { filter: drop-shadow(0 1px 4px rgba(67, 56, 202, 0.23)); }
+/* ===== 은은한 글로우 (번짐 줄이고 또렷하게) ===== */
+.pj__metric b { filter: drop-shadow(0 1px 2px rgba(61, 42, 214, 0.18)); }
 .jd__group h4 i,
-.intro__point h4 i { filter: drop-shadow(0 1px 2px rgba(67, 56, 202, 0.23)); }
-.jd__item.is-open .jd__toggle { box-shadow: 0 3px 10px rgba(67, 56, 202, 0.18); }
+.intro__point h4 i { filter: drop-shadow(0 1px 2px rgba(61, 42, 214, 0.18)); }
+.jd__item.is-open .jd__toggle { box-shadow: 0 3px 10px rgba(61, 42, 214, 0.18); }
 
 /* ===== 경력기술서 — 중분류 (PDF 경력기술서 구조) ===== */
 .jd__block + .jd__block { margin-top: 1.15rem; }

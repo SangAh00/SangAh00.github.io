@@ -1325,12 +1325,12 @@ a { color: inherit; text-decoration: none; }
   font-size: clamp(1.25rem, 2.1vw, 1.6rem);
   line-height: 1.2;
   letter-spacing: -0.02em;
-  /* 같은 보라 계열 3단 그라데이션 + 아주 느린 광택 흐름 (톤 다운) */
+  /* 같은 보라 계열 3단 그라데이션 + 아주 느린 광택 흐름 (톤 다운 2차) */
   background: linear-gradient(110deg,
     #3f37b8 0%,
-    #4d3bb2 35%,
-    #5b34b5 50%,
-    #4d3bb2 65%,
+    #443ab6 35%,
+    #4a3bb4 50%,
+    #443ab6 65%,
     #3f37b8 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
@@ -1346,7 +1346,7 @@ a { color: inherit; text-decoration: none; }
   .pj__metric b { animation: none; }
 }
 .pj__metric { text-align: center; }
-.pj__metric span {
+.pj__metric > span {
   display: block;
   margin: 0.2rem auto 0;
   font-size: 0.78rem;
@@ -1505,7 +1505,7 @@ a { color: inherit; text-decoration: none; }
     gap: 0.7rem;
   }
   .pj__metric b { font-size: 1.32rem; letter-spacing: -0.04em; }
-  .pj__metric span {
+  .pj__metric > span {
     font-size: 0.7rem;
     line-height: 1.25;
     min-height: 0;

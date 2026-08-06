@@ -407,7 +407,16 @@ a { color: inherit; text-decoration: none; }
   padding: 0.7rem 0;
   border-bottom: 1px solid var(--line);
 }
-.edu__list li em { font-style: normal; color: var(--muted); font-size: 0.9rem; font-weight: 600; white-space: nowrap; }
+/* 날짜는 고정폭 숫자로 — 기본 숫자는 1이 좁고 8·6이 넓어 년월이 들쭉날쭉해짐 */
+.edu__list li em {
+  font-style: normal;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
 .edu__awards li em {
   font-style: normal;
   background: var(--fg);

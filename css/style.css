@@ -1513,6 +1513,9 @@ a { color: inherit; text-decoration: none; }
     grid-auto-columns: 1fr;
     gap: 0.7rem;
   }
+  /* 좁은 화면에서는 pretty 가 마지막 줄에 두세 글자만 남기는 경우가 잦아 balance 로 */
+  .pj__role li, .pj__sum { text-wrap: balance; }
+
   .pj__metric b { font-size: 1.32rem; letter-spacing: -0.04em; }
   .pj__metric > span {
     font-size: 0.7rem;

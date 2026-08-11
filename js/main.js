@@ -163,6 +163,26 @@ function initScrollAnimations() {
     }
   }
 
+  /* 3a-0b. About lead — 스크롤 위치에 따라 보라 강조가 기본 → 무기 → 기회 로 이동 */
+  const leadKeys = gsap.utils.toArray(".intro__lead .lead__key");
+  if (leadKeys.length) {
+    const setActive = (i) =>
+      leadKeys.forEach((el, n) => el.classList.toggle("is-on", n === i));
+    if (reduceMotion) {
+      setActive(leadKeys.length - 1);
+    } else {
+      ScrollTrigger.create({
+        trigger: ".intro__lead",
+        start: "top 85%",
+        end: "bottom 35%",
+        // 위로 되감으면 progress 도 줄어들어 강조가 거꾸로 따라옴
+        onUpdate: (self) =>
+          setActive(Math.min(leadKeys.length - 1, Math.floor(self.progress * leadKeys.length))),
+        onLeaveBack: () => setActive(-1),
+      });
+    }
+  }
+
   /* 3a-1. About label reveal */
   if (document.querySelector(".intro__label")) {
     gsap.to(".intro__label", {

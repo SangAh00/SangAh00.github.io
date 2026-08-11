@@ -296,6 +296,16 @@ a { color: inherit; text-decoration: none; }
   max-width: 16ch;
 }
 .intro__lead .word { display: inline-block; }
+/* 스크롤에 따라 보라 강조가 기본 → 무기 → 기회 로 옮겨 다님 (main.js 3a-0b) */
+.lead__key {
+  font-weight: inherit;
+  color: inherit;
+  transition: color 0.35s var(--ease);
+}
+.lead__key.is-on { color: var(--accent); }
+@media (prefers-reduced-motion: reduce) {
+  .lead__key { transition: none; }
+}
 .intro__body {
   display: flex;
   flex-direction: column;

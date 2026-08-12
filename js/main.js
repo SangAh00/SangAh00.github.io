@@ -172,10 +172,10 @@ function initScrollAnimations() {
       setActive(leadKeys.length - 1);
     } else {
       ScrollTrigger.create({
-        // start·end 를 같은 화면선(80%)에 두면 progress 가 곧 01~04 블록을 지나온 비율이 된다
-        trigger: ".intro__points",
-        start: "top 80%",
-        end: "bottom 80%",
+        // 리드 문구가 화면에 보이는 전 구간(진입 ~ 완전히 벗어남)을 3등분 — 전환이 가장 느리다
+        trigger: ".intro__inner",
+        start: "top bottom",
+        end: "bottom top",
         // 위로 되감으면 progress 도 줄어들어 강조가 거꾸로 따라옴
         onUpdate: (self) =>
           setActive(Math.min(leadKeys.length - 1, Math.floor(self.progress * leadKeys.length))),

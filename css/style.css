@@ -1113,7 +1113,8 @@ a { color: inherit; text-decoration: none; }
 }
 .job__facts li { display: flex; gap: 0.7rem; align-items: baseline; }
 .job__facts li b {
-  flex: 0 0 2.6em;
+  /* 라벨 최장값이 '연결범위'·'퇴사사유'(4자)라 4.4em */
+  flex: 0 0 4.4em;
   color: var(--fg);
   font-weight: 700;
   letter-spacing: 0.02em;
